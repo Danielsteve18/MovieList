@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import "./App.css";
 import MovieList from './components/MovieList';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   const [movies] = useState([
@@ -50,13 +51,19 @@ const App: React.FC = () => {
       title: "What if Season Two",
       genre: "Ciencia Ficción",
       image: "what 2.jpg",
+    },
+    {
+      title: "Termineitor",
+      genre: "Ciencia Ficción",
+      image: "termineitor.jpg",
     }
     
   ]);
   return(
     <div className="app-container">
-      <h1 className="app-title">🎬 Movie List</h1>
+      <h1 className="app-title">🎬 FilmFusion</h1>
       <MovieList movies={movies} />
+      <Footer/>
     </div>
   );
 };
